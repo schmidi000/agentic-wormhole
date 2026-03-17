@@ -47,13 +47,17 @@ cp AGENTIC_WORMHOLE_CONFIG.example.json AGENTIC_WORMHOLE_CONFIG.json
 npm run build
 ```
 
-5. Install CLI once (pick one):
+5. Install CLI once:
+
+Install from npm (recommended):
 ```bash
-npm install -g /home/tobias/Projects/agentic-wormhole/server
+npm install -g agentic-wormhole
 ```
-or
+The npm package contains both the server CLI and the web UI assets.
+
+Install from local source (for contributors):
 ```bash
-alias agentic-wormhole='node /home/tobias/Projects/agentic-wormhole/server/dist/cli.js'
+npm link --workspace server
 ```
 
 6. In your target project directory (the one containing `AGENTIC_WORMHOLE_CONFIG.json`), start server:

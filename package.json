@@ -12,7 +12,7 @@
     "dev": "concurrently -k \"npm:dev:server\" \"npm:dev:web\"",
     "dev:server": "npm --workspace server run dev",
     "dev:web": "npm --workspace web run dev",
-    "build": "npm --workspace web run build && npm --workspace server run build",
+    "build": "npm --workspace web run build && npm --workspace server run build && node server/copy-web-dist.mjs",
     "start": "npm --workspace server run start",
     "typecheck": "npm --workspace web run typecheck && npm --workspace server run typecheck",
     "lint": "npm run typecheck",

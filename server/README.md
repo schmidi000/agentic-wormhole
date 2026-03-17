@@ -1,6 +1,7 @@
 # agentic-wormhole
 
 Local-first mobile control plane for coding agents and full-stack apps.
+This package includes both the CLI server and the bundled web UI.
 
 ## Install
 
@@ -21,5 +22,4 @@ agentic-wormhole claude
 
 Project docs and configuration examples live in the repository root `README.md`:
 
-- https://github.com/tobias/agentic-wormhole
 - https://github.com/schmidi000/agentic-wormhole

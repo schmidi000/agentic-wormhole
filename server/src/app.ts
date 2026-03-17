@@ -1,4 +1,5 @@
 import http from "node:http";
+import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import express, { type Request, type Response, type NextFunction } from "express";
@@ -123,7 +124,14 @@ export async function startServer(options: StartServerOptions): Promise<void> {
     );
   } else {
     const currentDir = path.dirname(fileURLToPath(import.meta.url));
-    const webDist = path.resolve(currentDir, "../../web/dist");
+    const bundledWebDist = path.resolve(currentDir, "web");
+    const workspaceWebDist = path.resolve(currentDir, "../../web/dist");
+    const webDist = fs.existsSync(bundledWebDist) ? bundledWebDist : workspaceWebDist;
+
+    if (!fs.existsSync(webDist)) {
+      throw new Error(`Web UI assets not found. Expected ${bundledWebDist} or ${workspaceWebDist}.`);
+    }
+
     app.use(express.static(webDist));
     app.get("*", (_req, res) => {
       res.sendFile(path.join(webDist, "index.html"));
