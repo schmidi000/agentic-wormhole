@@ -1,3 +1,9 @@
+## [1.0.1](https://github.com/schmidi000/agentic-wormhole/compare/v1.0.0...v1.0.1) (2026-03-17)
+
+### Bug Fixes
+
+* add npm package readme ([67f03a6](https://github.com/schmidi000/agentic-wormhole/commit/67f03a6ea4299279519787b310f14fb3e96e7e20))
+
 ## 1.0.0 (2026-03-17)
 
 ### Features
