@@ -1,0 +1,35 @@
+{
+  "name": "agentic-wormhole",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "bin": {
+    "agentic-wormhole": "dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "dev": "tsx watch src/cli.ts serve --dev",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/cli.js serve",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "http-proxy-middleware": "^3.0.3",
+    "node-pty": "^1.0.0",
+    "ws": "^8.18.1",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.13.10",
+    "@types/ws": "^8.18.0",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
+  }
+}

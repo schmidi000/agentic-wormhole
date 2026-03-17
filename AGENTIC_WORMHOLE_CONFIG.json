@@ -1,0 +1,18 @@
+{
+  "frontend": {
+    "cwd": "../relocate/frontend",
+    "startCommand": "npm run dev",
+    "cleanCommand": "npm ci",
+    "previewUrl": "http://127.0.0.1:3000"
+  },
+  "backend": {
+    "cwd": "../relocate/backend",
+    "startCommand": "./gradlew bootRun",
+    "cleanCommand": "./gradlew clean build"
+  },
+  "security": {
+    "listenHost": "0.0.0.0",
+    "listenPort": 8787,
+    "accessToken": "change-me-now"
+  }
+}

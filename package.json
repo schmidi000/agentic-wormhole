@@ -1,0 +1,35 @@
+{
+  "name": "agentic-wormhole",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Local-first mobile control plane for coding agents and full-stack dev servers.",
+  "license": "MIT",
+  "workspaces": [
+    "server",
+    "web"
+  ],
+  "scripts": {
+    "dev": "concurrently -k \"npm:dev:server\" \"npm:dev:web\"",
+    "dev:server": "npm --workspace server run dev",
+    "dev:web": "npm --workspace web run dev",
+    "build": "npm --workspace web run build && npm --workspace server run build",
+    "start": "npm --workspace server run start",
+    "typecheck": "npm --workspace web run typecheck && npm --workspace server run typecheck",
+    "lint": "npm run typecheck",
+    "release": "semantic-release",
+    "release:dry": "semantic-release --dry-run"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^13.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^11.0.6",
+    "@semantic-release/npm": "^12.0.2",
+    "@semantic-release/release-notes-generator": "^14.1.0",
+    "concurrently": "^9.1.2",
+    "semantic-release": "^25.0.2"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "frontend": {
+    "cwd": "../your-app/frontend",
+    "startCommand": "npm run dev -- --host 0.0.0.0 --port 5173",
+    "cleanCommand": "npm ci",
+    "previewUrl": "http://127.0.0.1:5173"
+  },
+  "backend": {
+    "cwd": "../your-app/backend",
+    "startCommand": "npm run dev",
+    "cleanCommand": "npm ci",
+    "previewUrl": "http://127.0.0.1:3000"
+  },
+  "security": {
+    "listenHost": "0.0.0.0",
+    "listenPort": 8787,
+    "accessToken": "change-me-now"
+  }
+}
