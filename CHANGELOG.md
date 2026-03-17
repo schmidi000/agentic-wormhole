@@ -1,3 +1,9 @@
+## [1.1.0](https://github.com/schmidi000/agentic-wormhole/compare/v1.0.1...v1.1.0) (2026-03-17)
+
+### Features
+
+* bundle web ui into npm package ([e7e6877](https://github.com/schmidi000/agentic-wormhole/commit/e7e687757bcf7d7d24eb708ea3f698d0e4a051bc))
+
 ## [1.0.1](https://github.com/schmidi000/agentic-wormhole/compare/v1.0.0...v1.0.1) (2026-03-17)
 
 ### Bug Fixes
